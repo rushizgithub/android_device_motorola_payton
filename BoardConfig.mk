@@ -104,7 +104,6 @@ BOARD_ROOT_EXTRA_FOLDERS := bt_firmware \
 TARGET_RECOVERY_DEVICE_MODULES += \
     android.hidl.base@1.0 \
     bootctrl.$(TARGET_BOARD_PLATFORM) \
-    libandroidicu \
     libcap \
     libion \
     libpcrecpp \
