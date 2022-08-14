@@ -1,3 +1,4 @@
 ro.display.series=Motorola Moto x4
 ro.product.board=sdm660
 ro.board.platform=sdm660
+ro.crypto.volume.filenames_mode=aes-256-cts

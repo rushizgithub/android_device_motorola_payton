@@ -6,7 +6,7 @@ Copyright 2022 - The TeamWin Recovery Project
 For building TWRP for Motorola Moto X4 ONLY.
 
 ### Kernel Source
-https://github.com/moto-SDM660/android_kernel_motorola_sdm660/tree/twrp-11
+https://github.com/moto-SDM660/android_kernel_motorola_sdm660/tree/twrp-12.1
 
 ### Device specifications
 =====================================
@@ -31,14 +31,13 @@ Front Camera | 8 MP
 
 ## Compile
 
-First repo init the twrp-11 tree (and necessary qcom dependencies):
+First repo init the twrp-12.1 tree:
 
 ```
-mkdir ~/android/twrp-11
-cd ~/android/twrp-11
-repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-11
+mkdir ~/android/twrp-12.1
+cd ~/android/twrp-12.1
+repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
 mkdir -p .repo/local_manifests
-curl https://raw.githubusercontent.com/TeamWin/buildtree_manifests/master/min-aosp-11/qcom.xml > .repo/local_manifests/qcom.xml
 ```
 
 Then add to a local manifest (if you don't have .repo/local_manifest then make that directory and make a blank file and name it something like twrp.xml):
@@ -47,7 +46,7 @@ Then add to a local manifest (if you don't have .repo/local_manifest then make t
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <project name="osm0sis/twrp_abtemplate" path="bootable/recovery/installer" remote="github" revision="master"/>
-  <project name="android_device_motorola_payton" path="device/motorola/payton" remote="TeamWin" revision="android-11"/>
+  <project name="android_device_motorola_payton" path="device/motorola/payton" remote="TeamWin" revision="android-12.1"/>
 </manifest>
 ```
 
@@ -57,7 +56,7 @@ Now you can sync your source:
 repo sync
 ```
 
-To automatically make the TWRP installer zip, you need to import this commit in the build/make path: https://gerrit.twrp.me/c/android_build/+/4964
+To automatically make the TWRP installer zip, you need to import this commit in the build/make path: https://gerrit.twrp.me/c/android_build/+/5445
 
 Finally execute these:
 
