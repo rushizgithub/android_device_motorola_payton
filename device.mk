@@ -55,12 +55,12 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Overrides
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_DEVICE=payton \
+    PRODUCT_DEVICE=chef \
     PRODUCT_NAME=$(PRODUCT_RELEASE_NAME) \
-    TARGET_DEVICE=payton
+    TARGET_DEVICE=chef
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.product=payton
+    ro.build.product=chef
 
 # Blacklist
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
